@@ -1,4 +1,4 @@
-const Encryption = require('./caesarCipher')
+const {Encryption, Decryption} = require('./caesarCipher')
 
 
 test('turns a string into a caeserCipher', () => {
@@ -6,4 +6,6 @@ test('turns a string into a caeserCipher', () => {
 })
 
 
-//test('decrypts the provided string')
+test('decrypts the provided string', () => {
+    expect(Decryption('Khoor Zruog',3)).toBe('Hello World')
+})
